@@ -3,27 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CF6BD7D225150C650052E2A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6BD7D125150C650052E2A6 /* AppDelegate.swift */; };
 		CF6BD7D425150C650052E2A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6BD7D325150C650052E2A6 /* SceneDelegate.swift */; };
-		CF6BD7D625150C650052E2A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6BD7D525150C650052E2A6 /* ViewController.swift */; };
+		CF6BD7D625150C650052E2A6 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6BD7D525150C650052E2A6 /* WeatherViewController.swift */; };
 		CF6BD7D925150C650052E2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6BD7D725150C650052E2A6 /* Main.storyboard */; };
 		CF6BD7DB25150C670052E2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6BD7DA25150C670052E2A6 /* Assets.xcassets */; };
 		CF6BD7DE25150C670052E2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6BD7DC25150C670052E2A6 /* LaunchScreen.storyboard */; };
+		CF6BD7E9251514B90052E2A6 /* ChangeCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6BD7E8251514B90052E2A6 /* ChangeCityViewController.swift */; };
+		CF6BD7EC251515AA0052E2A6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CF6BD7EB251515AA0052E2A6 /* Alamofire */; };
+		CF6BD7EF251515D90052E2A6 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CF6BD7EE251515D90052E2A6 /* SwiftyJSON */; };
+		CF6BD7F2251517060052E2A6 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6BD7F1251517060052E2A6 /* WeatherDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF6BD7CE25150C650052E2A6 /* OpenWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6BD7D125150C650052E2A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF6BD7D325150C650052E2A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF6BD7D525150C650052E2A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF6BD7D525150C650052E2A6 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		CF6BD7D825150C650052E2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF6BD7DA25150C670052E2A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF6BD7DD25150C670052E2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF6BD7DF25150C670052E2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF6BD7E8251514B90052E2A6 /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
+		CF6BD7F1251517060052E2A6 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6BD7EF251515D90052E2A6 /* SwiftyJSON in Frameworks */,
+				CF6BD7EC251515AA0052E2A6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,57 @@
 		CF6BD7D025150C650052E2A6 /* OpenWeather */ = {
 			isa = PBXGroup;
 			children = (
-				CF6BD7D125150C650052E2A6 /* AppDelegate.swift */,
-				CF6BD7D325150C650052E2A6 /* SceneDelegate.swift */,
-				CF6BD7D525150C650052E2A6 /* ViewController.swift */,
-				CF6BD7D725150C650052E2A6 /* Main.storyboard */,
+				CF6BD7F3251530D40052E2A6 /* Resources */,
+				CF6BD7F0251516CB0052E2A6 /* Model */,
+				CF6BD7E52515101E0052E2A6 /* Delegates */,
+				CF6BD7E6251510290052E2A6 /* Controller */,
+				CF6BD7E72515103B0052E2A6 /* View */,
 				CF6BD7DA25150C670052E2A6 /* Assets.xcassets */,
 				CF6BD7DC25150C670052E2A6 /* LaunchScreen.storyboard */,
 				CF6BD7DF25150C670052E2A6 /* Info.plist */,
 			);
 			path = OpenWeather;
+			sourceTree = "<group>";
+		};
+		CF6BD7E52515101E0052E2A6 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				CF6BD7D125150C650052E2A6 /* AppDelegate.swift */,
+				CF6BD7D325150C650052E2A6 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		CF6BD7E6251510290052E2A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF6BD7D525150C650052E2A6 /* WeatherViewController.swift */,
+				CF6BD7E8251514B90052E2A6 /* ChangeCityViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF6BD7E72515103B0052E2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF6BD7D725150C650052E2A6 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF6BD7F0251516CB0052E2A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF6BD7F1251517060052E2A6 /* WeatherDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF6BD7F3251530D40052E2A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +133,10 @@
 			dependencies = (
 			);
 			name = OpenWeather;
+			packageProductDependencies = (
+				CF6BD7EB251515AA0052E2A6 /* Alamofire */,
+				CF6BD7EE251515D90052E2A6 /* SwiftyJSON */,
+			);
 			productName = OpenWeather;
 			productReference = CF6BD7CE25150C650052E2A6 /* OpenWeather.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +165,10 @@
 				Base,
 			);
 			mainGroup = CF6BD7C525150C650052E2A6;
+			packageReferences = (
+				CF6BD7EA251515AA0052E2A6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CF6BD7ED251515D90052E2A6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = CF6BD7CF25150C650052E2A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF6BD7D625150C650052E2A6 /* ViewController.swift in Sources */,
+				CF6BD7D625150C650052E2A6 /* WeatherViewController.swift in Sources */,
+				CF6BD7F2251517060052E2A6 /* WeatherDataModel.swift in Sources */,
 				CF6BD7D225150C650052E2A6 /* AppDelegate.swift in Sources */,
 				CF6BD7D425150C650052E2A6 /* SceneDelegate.swift in Sources */,
+				CF6BD7E9251514B90052E2A6 /* ChangeCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OpenWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OpenWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,6 +398,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF6BD7EA251515AA0052E2A6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
+		CF6BD7ED251515D90052E2A6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF6BD7EB251515AA0052E2A6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF6BD7EA251515AA0052E2A6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CF6BD7EE251515D90052E2A6 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF6BD7ED251515D90052E2A6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF6BD7C625150C650052E2A6 /* Project object */;
 }
