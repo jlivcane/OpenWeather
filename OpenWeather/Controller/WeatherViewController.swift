@@ -19,6 +19,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
     @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var windSpeedLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -78,7 +80,13 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
             weatherDataModel.city = json["name"].stringValue
             weatherDataModel.condition = json["weather"][0]["id"].intValue
             
+            weatherDataModel.humidity = json["main"]["humidity"].intValue
+            weatherDataModel.windSpeed = json["wind"]["speed"].intValue
+            
+            
             weatherDataModel.weatherIconName = weatherDataModel.updateWeatherIcon(condition: weatherDataModel.condition)
+            
+            updateUIWithWeatherData() 
         }else{
             self.cityLabel.text = "Connection Unavailable"
         }
@@ -91,6 +99,9 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
         cityLabel.text = weatherDataModel.city
         tempLabel.text = "\(weatherDataModel.temp) º"
         weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
+        humidityLabel.text = "Humidity \(weatherDataModel.humidity) %"
+        windSpeedLabel.text = "Wind Speed \(weatherDataModel.windSpeed) m/s"
+        
     }
     
     //Mark: - Navigation

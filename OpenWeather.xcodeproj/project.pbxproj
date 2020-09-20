@@ -17,6 +17,9 @@
 		CF6BD7EC251515AA0052E2A6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CF6BD7EB251515AA0052E2A6 /* Alamofire */; };
 		CF6BD7EF251515D90052E2A6 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CF6BD7EE251515D90052E2A6 /* SwiftyJSON */; };
 		CF6BD7F2251517060052E2A6 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6BD7F1251517060052E2A6 /* WeatherDataModel.swift */; };
+		CF97FC362516A81B005409BC /* AppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97FC352516A81B005409BC /* AppearanceViewController.swift */; };
+		CF97FC392516AA1E005409BC /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97FC382516AA1E005409BC /* InfoViewController.swift */; };
+		CF97FC3C2516B147005409BC /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97FC3B2516B147005409BC /* BounceButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		CF6BD7DF25150C670052E2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF6BD7E8251514B90052E2A6 /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
 		CF6BD7F1251517060052E2A6 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
+		CF97FC352516A81B005409BC /* AppearanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceViewController.swift; sourceTree = "<group>"; };
+		CF97FC382516AA1E005409BC /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		CF97FC3B2516B147005409BC /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +73,8 @@
 				CF6BD7F3251530D40052E2A6 /* Resources */,
 				CF6BD7F0251516CB0052E2A6 /* Model */,
 				CF6BD7E52515101E0052E2A6 /* Delegates */,
-				CF6BD7E6251510290052E2A6 /* Controller */,
 				CF6BD7E72515103B0052E2A6 /* View */,
+				CF6BD7E6251510290052E2A6 /* Controller */,
 				CF6BD7DA25150C670052E2A6 /* Assets.xcassets */,
 				CF6BD7DC25150C670052E2A6 /* LaunchScreen.storyboard */,
 				CF6BD7DF25150C670052E2A6 /* Info.plist */,
@@ -90,6 +96,8 @@
 			children = (
 				CF6BD7D525150C650052E2A6 /* WeatherViewController.swift */,
 				CF6BD7E8251514B90052E2A6 /* ChangeCityViewController.swift */,
+				CF97FC352516A81B005409BC /* AppearanceViewController.swift */,
+				CF97FC382516AA1E005409BC /* InfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -113,6 +121,7 @@
 		CF6BD7F3251530D40052E2A6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CF97FC3B2516B147005409BC /* BounceButton.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -199,7 +208,10 @@
 				CF6BD7D625150C650052E2A6 /* WeatherViewController.swift in Sources */,
 				CF6BD7F2251517060052E2A6 /* WeatherDataModel.swift in Sources */,
 				CF6BD7D225150C650052E2A6 /* AppDelegate.swift in Sources */,
+				CF97FC392516AA1E005409BC /* InfoViewController.swift in Sources */,
 				CF6BD7D425150C650052E2A6 /* SceneDelegate.swift in Sources */,
+				CF97FC3C2516B147005409BC /* BounceButton.swift in Sources */,
+				CF97FC362516A81B005409BC /* AppearanceViewController.swift in Sources */,
 				CF6BD7E9251514B90052E2A6 /* ChangeCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
