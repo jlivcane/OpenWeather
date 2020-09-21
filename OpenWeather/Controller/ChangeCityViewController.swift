@@ -20,20 +20,20 @@ class ChangeCityViewController: UIViewController {
     
     @IBAction func getWeatherTapped(_ sender: Any) {
         
-//        func warningPopup(withTitle title:String?, withMessage message:String?){
-//
-//            DispatchQueue.main.async {
-//
-//                let popUp = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//                let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-//                popUp.addAction(okButton)
-//                self.present(popUp, animated: true, completion: nil)
-//
-//            }
-//        }
+                func warningPopup(withTitle title:String?, withMessage message:String?){
+        
+                    DispatchQueue.main.async {
+        
+                        let popUp = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                        let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        popUp.addAction(okButton)
+                        self.present(popUp, animated: true, completion: nil)
+        
+                    }
+                }
         
         guard let cityName = cityTextField.text else {
-           // warningPopup(withTitle: "Input error!", withMessage: "City text field can't be empty!")
+            // warningPopup(withTitle: "Input error!", withMessage: "City text field can't be empty!")
             return
         }
         

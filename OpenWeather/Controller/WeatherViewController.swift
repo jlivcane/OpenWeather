@@ -30,7 +30,18 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        styleUI()
     }
+    
+    func styleUI(){
+        windSpeedLabel.layer.cornerRadius = 15
+        windSpeedLabel.layer.borderWidth = 2
+        
+        humidityLabel.layer.cornerRadius = 15
+        humidityLabel.layer.borderWidth = 2
+        
+    }
+    
     
     //MARK: - Location Manager Delegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -99,8 +110,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
         cityLabel.text = weatherDataModel.city
         tempLabel.text = "\(weatherDataModel.temp) º"
         weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
-        humidityLabel.text = "Humidity \(weatherDataModel.humidity) %"
-        windSpeedLabel.text = "Wind Speed \(weatherDataModel.windSpeed) m/s"
+        humidityLabel.text = "Humidity \n\(weatherDataModel.humidity) %"
+        windSpeedLabel.text = "Wind Speed \n\(weatherDataModel.windSpeed) m/s"
         
     }
     
@@ -108,7 +119,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "changeCityName" {
             let destinationVC = segue.destination as!
-            ChangeCityViewController
+                ChangeCityViewController
             destinationVC.delegate = self
         }
     }
