@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ltb-BV-acn">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController interfaceStyle="dark" id="BYZ-38-t0r" customClass="WeatherViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-from-rawpixel-id-2524826-original" translatesAutoresizingMaskIntoConstraints="NO" id="5wF-Jn-nqy">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="LUm-sU-Kzy"/>
                                     <constraint firstAttribute="height" constant="896" id="zlr-bi-Bxz"/>
@@ -44,7 +44,7 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="acR-6w-nFt">
-                                <rect key="frame" x="121" y="114" width="172" height="326"/>
+                                <rect key="frame" x="101.5" y="114" width="172" height="326"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy2" translatesAutoresizingMaskIntoConstraints="NO" id="U54-ze-4jU">
                                         <rect key="frame" x="26" y="0.0" width="120" height="120"/>
@@ -83,7 +83,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRS-bs-Ubc" customClass="BounceButton" customModule="OpenWeather" customModuleProvider="target">
-                                <rect key="frame" x="205" y="792" width="157" height="50"/>
+                                <rect key="frame" x="205" y="597" width="118" height="50"/>
                                 <color key="backgroundColor" red="0.99742064760000004" green="0.76585116580000001" blue="0.24668621130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="A1C-PW-D8Z"/>
@@ -125,11 +125,11 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="Vsy-05-qNE" kind="show" identifier="changeCityName" id="VVQ-FD-FOG"/>
+                                    <segue destination="Vsy-05-qNE" kind="presentation" identifier="changeCityName" id="VVQ-FD-FOG"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="oFw-mQ-IlL">
-                                <rect key="frame" x="63" y="473" width="288" height="120"/>
+                                <rect key="frame" x="43.5" y="473" width="288" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PR-bI-NNy" customClass="DesignableLabel" customModule="OpenWeather" customModuleProvider="target" propertyAccessControl="none">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -313,11 +313,11 @@
             <objects>
                 <viewController title="Info View Controller" id="NPU-mz-9Ml" customClass="InfoViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DhD-Vd-xg2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wz7-xo-PGu">
-                                <rect key="frame" x="132.66666666666666" y="164" width="148.99999999999997" height="21"/>
+                                <rect key="frame" x="113" y="164" width="149" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="149" id="eWz-cS-QUM"/>
                                 </constraints>
@@ -325,7 +325,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnr-JI-WO8" customClass="BounceButton" customModule="OpenWeather" customModuleProvider="target">
-                                <rect key="frame" x="344" y="0.0" width="40" height="40"/>
+                                <rect key="frame" x="305" y="0.0" width="40" height="40"/>
                                 <color key="backgroundColor" red="0.99742064760000004" green="0.76585116580000001" blue="0.24668621130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
@@ -348,7 +348,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwY-Ss-XEK">
-                                <rect key="frame" x="43.666666666666657" y="389" width="327" height="140"/>
+                                <rect key="frame" x="24" y="389" width="327" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="121" id="8fk-K8-jkW"/>
                                     <constraint firstAttribute="width" constant="327" id="lo3-0M-XmM"/>
@@ -417,11 +417,11 @@
             <objects>
                 <viewController title="Appearance View Controller" id="TYc-IP-pv5" customClass="AppearanceViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WBh-H9-mo5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="vXi-lD-xLG">
-                                <rect key="frame" x="130.66666666666666" y="435.66666666666669" width="152.99999999999997" height="87.000000000000057"/>
+                                <rect key="frame" x="111" y="316" width="153" height="87"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Mode is On" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RX7-tI-rcq">
                                         <rect key="frame" x="0.0" y="0.0" width="153" height="29"/>
@@ -477,11 +477,11 @@
             <objects>
                 <viewController id="Vsy-05-qNE" customClass="ChangeCityViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q5A-H6-v9t">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-from-rawpixel-id-2524826-original" translatesAutoresizingMaskIntoConstraints="NO" id="rj3-VR-J92">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-140" width="375" height="821"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="9s4-Tr-xeE"/>
                                     <constraint firstAttribute="height" constant="667" id="Vid-6Z-B7Z"/>
@@ -506,16 +506,16 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Oe-z7-U05">
-                                <rect key="frame" x="107" y="199" width="200" height="76"/>
+                                <rect key="frame" x="107" y="114" width="161" height="76"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u3R-ha-uz0" customClass="DesignableTextField" customModule="OpenWeather" customModuleProvider="target" propertyAccessControl="none">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="161" height="34"/>
                                         <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-fq-CrW" customClass="BounceButton" customModule="OpenWeather" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="42" width="200" height="34"/>
+                                        <rect key="frame" x="0.0" y="42" width="161" height="34"/>
                                         <color key="backgroundColor" red="0.99742064760000004" green="0.76585116580000001" blue="0.24668621130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="6fi-qU-TJT"/>
@@ -605,7 +605,7 @@
                             <constraint firstItem="rj3-VR-J92" firstAttribute="top" secondItem="iso-sG-6CG" secondAttribute="top" id="kgs-aJ-iVg"/>
                             <constraint firstItem="rj3-VR-J92" firstAttribute="leading" secondItem="iso-sG-6CG" secondAttribute="leading" id="mph-Fc-fXW"/>
                             <constraint firstItem="rj3-VR-J92" firstAttribute="centerY" secondItem="Q5A-H6-v9t" secondAttribute="centerY" id="oMJ-e5-oAb"/>
-                            <constraint firstItem="3Oe-z7-U05" firstAttribute="top" secondItem="iso-sG-6CG" secondAttribute="top" constant="59" id="qc0-jF-zp1">
+                            <constraint firstItem="3Oe-z7-U05" firstAttribute="top" secondItem="iso-sG-6CG" secondAttribute="top" constant="114" id="qc0-jF-zp1">
                                 <variation key="heightClass=compact-widthClass=regular" constant="190"/>
                             </constraint>
                             <constraint firstAttribute="bottomMargin" secondItem="rj3-VR-J92" secondAttribute="bottom" constant="-21" id="vBI-ZC-Apb"/>
@@ -745,7 +745,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ltb-BV-acn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" largeTitles="YES" id="Uju-dy-4Wg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -763,7 +763,7 @@
             <size key="intrinsicContentSize" width="98" height="30"/>
         </designable>
         <designable name="NRS-bs-Ubc">
-            <size key="intrinsicContentSize" width="107.33333333333333" height="23.666666666666668"/>
+            <size key="intrinsicContentSize" width="108" height="24"/>
         </designable>
         <designable name="Pnr-JI-WO8">
             <size key="intrinsicContentSize" width="30" height="34"/>
