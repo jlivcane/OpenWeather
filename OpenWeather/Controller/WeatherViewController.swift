@@ -35,10 +35,10 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
     
     func styleUI(){
         windSpeedLabel.layer.cornerRadius = 15
-        windSpeedLabel.layer.borderWidth = 2
+        windSpeedLabel.layer.borderWidth = 1
         
         humidityLabel.layer.cornerRadius = 15
-        humidityLabel.layer.borderWidth = 2
+        humidityLabel.layer.borderWidth = 1
         
     }
     

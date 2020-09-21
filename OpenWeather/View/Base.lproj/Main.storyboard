@@ -61,7 +61,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="97" id="gyx-tG-6qI"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="45"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -131,7 +131,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="oFw-mQ-IlL">
                                 <rect key="frame" x="63" y="473" width="288" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PR-bI-NNy" customClass="DesignableLabel" customModule="OpenWeather" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PR-bI-NNy" customClass="DesignableLabel" customModule="OpenWeather" customModuleProvider="target" propertyAccessControl="none">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -283,14 +283,14 @@
                     <navigationItem key="navigationItem" id="Wey-4Q-ReN">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="549-qb-bCI">
                             <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" red="0.99742064760000004" green="0.66996965750000004" blue="0.029112083149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="NPU-mz-9Ml" kind="presentation" id="ebm-7t-aEM"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="Ykj-4u-8E1">
                             <imageReference key="image" image="moon.circle" catalog="system" symbolScale="large"/>
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" red="0.99742064760000004" green="0.66996965750000004" blue="0.029112083149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="TYc-IP-pv5" kind="show" id="Xx2-ww-yCo"/>
                             </connections>
@@ -324,16 +324,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnr-JI-WO8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnr-JI-WO8" customClass="BounceButton" customModule="OpenWeather" customModuleProvider="target">
                                 <rect key="frame" x="344" y="0.0" width="40" height="40"/>
                                 <color key="backgroundColor" red="0.99742064760000004" green="0.76585116580000001" blue="0.24668621130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="5xW-VA-tRK"/>
                                     <constraint firstAttribute="height" constant="40" id="Ezx-oo-X7d"/>
                                 </constraints>
-                                <state key="normal" image="cloudRefresh">
-                                    <color key="titleColor" red="0.99742064760000004" green="0.76585116580000001" blue="0.24668621130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonTapped:" destination="NPU-mz-9Ml" eventType="touchUpInside" id="PdY-xS-IKA"/>
                                 </connections>
@@ -423,8 +432,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iY-xf-szg">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iY-xf-szg" customClass="BounceButton" customModule="OpenWeather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="57" width="153" height="30"/>
+                                        <color key="backgroundColor" red="0.99742064760000004" green="0.76585116580000001" blue="0.24668621130000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="7SP-Fm-AMl"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="153" id="LRx-5Z-vau"/>
@@ -434,7 +444,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -608,6 +618,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="0V5-1n-w1W"/>
+                                <exclude reference="0eh-2S-BRX"/>
                                 <exclude reference="2dB-2y-zTm"/>
                                 <exclude reference="66V-TC-1Ao"/>
                                 <exclude reference="7mq-wl-Sj4"/>
@@ -627,8 +639,6 @@
                                 <exclude reference="oMJ-e5-oAb"/>
                                 <exclude reference="vBI-ZC-Apb"/>
                                 <exclude reference="zIb-sm-qFA"/>
-                                <exclude reference="0V5-1n-w1W"/>
-                                <exclude reference="0eh-2S-BRX"/>
                                 <exclude reference="2R9-H6-0Kd"/>
                                 <exclude reference="5id-y7-Ezn"/>
                                 <exclude reference="AxW-bZ-GUC"/>
@@ -643,6 +653,7 @@
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="0V5-1n-w1W"/>
                                 <include reference="7mq-wl-Sj4"/>
                                 <include reference="Hde-ZF-dCe"/>
                                 <exclude reference="Jow-QJ-cbh"/>
@@ -657,7 +668,6 @@
                                 <exclude reference="wAs-U5-hZF"/>
                                 <exclude reference="wtX-AZ-hSM"/>
                                 <exclude reference="yMk-o0-CS0"/>
-                                <include reference="0V5-1n-w1W"/>
                                 <include reference="5id-y7-Ezn"/>
                                 <exclude reference="Gnd-4U-CYD"/>
                                 <include reference="OXF-m8-Oft"/>
@@ -667,6 +677,7 @@
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
+                                <include reference="0eh-2S-BRX"/>
                                 <include reference="2dB-2y-zTm"/>
                                 <include reference="66V-TC-1Ao"/>
                                 <include reference="Fgz-DA-PEc"/>
@@ -686,7 +697,6 @@
                                 <exclude reference="wAs-U5-hZF"/>
                                 <exclude reference="wtX-AZ-hSM"/>
                                 <exclude reference="yMk-o0-CS0"/>
-                                <include reference="0eh-2S-BRX"/>
                                 <exclude reference="AxW-bZ-GUC"/>
                                 <exclude reference="CQf-KC-SJ5"/>
                                 <exclude reference="DG6-RE-X0h"/>
@@ -749,15 +759,20 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="0iY-xf-szg">
+            <size key="intrinsicContentSize" width="98" height="30"/>
+        </designable>
         <designable name="NRS-bs-Ubc">
             <size key="intrinsicContentSize" width="107.33333333333333" height="23.666666666666668"/>
+        </designable>
+        <designable name="Pnr-JI-WO8">
+            <size key="intrinsicContentSize" width="30" height="34"/>
         </designable>
         <designable name="SHA-fq-CrW">
             <size key="intrinsicContentSize" width="85" height="32"/>
         </designable>
     </designables>
     <resources>
-        <image name="cloudRefresh" width="88" height="83"/>
         <image name="cloudy2" width="128" height="128"/>
         <image name="image-from-rawpixel-id-2524826-original" width="2667" height="4000"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>

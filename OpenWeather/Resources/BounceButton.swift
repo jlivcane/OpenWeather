@@ -18,11 +18,8 @@ import UIKit
         }, completion: nil)
         super.touchesBegan(touches, with: event)
     }
-    @IBInspectable var borderColor: UIColor = UIColor.clear {
-        didSet{
-            self.layer.borderColor = borderColor.cgColor
-        }
-    }
+    
 }
+
 
 
